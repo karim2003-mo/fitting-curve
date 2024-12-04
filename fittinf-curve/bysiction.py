@@ -94,7 +94,9 @@ class Bysiction :
         return rec()
 def main() :
     """
-    Enter your code here
+    Enter your code here\n
+    Note : when you enter polynomial you must enter it as list for example
+    X^2+4x-1=0 => [1,4,-1]
     """
     b=Bysiction()
     b.setequation([1,0,-8,5],start=-5,end=5,decimals=4)
