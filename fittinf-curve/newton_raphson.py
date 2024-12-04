@@ -1,6 +1,7 @@
 from bysiction import Bysiction
 class Newton_Raphson(Bysiction) :
     new_x=None
+    Maximum_iteration=100
     def __init__(self) -> None:
         """
         this is only for polynomials
@@ -47,6 +48,9 @@ class Newton_Raphson(Bysiction) :
         else :
             return f"the convergance is equal to {conv} ,so that{val} is not valid"
     def calc_newton_val(self,val,num_of_decimals: int) :
+        self.Maximum_iteration-=1
+        if self.Maximum_iteration==0 :
+            return
         print(val)
         q=float(f"{val-(self.get_f_of_x(c=len(self.coeffient_list)-1,test_point=val)/self.get_diff1_val(val)) : .{num_of_decimals}f}")
         print(q)
@@ -59,5 +63,6 @@ def main() :
     """
     Enter your code here
     """
+    
 if __name__=="__main__" :
     main()
